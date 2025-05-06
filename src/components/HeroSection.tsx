@@ -31,7 +31,7 @@ const HeroSection = () => {
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-portfolio-blue mx-auto overflow-hidden border-4 border-white shadow-xl">
                 {/* Replace with your image */}
                 <div className="w-full h-full bg-gradient-to-br from-portfolio-blue to-portfolio-teal flex items-center justify-center text-white text-9xl font-bold">
-                   <img src="public/Delight.PNG" alt= "" />
+                   <img src="/Delight.PNG" alt= "" />
                 </div>
               </div>
               <div className="absolute -bottom-5 -right-5 bg-white rounded-lg shadow-lg p-4 transform rotate-3">
