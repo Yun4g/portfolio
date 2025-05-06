@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Code, Link, ArrowRight } from 'lucide-react';
 
@@ -10,41 +9,41 @@ const ProjectsSection = () => {
       id: 1,
       title: "E-commerce Website",
       category: "web",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "A fully responsive e-commerce platform built with React, Redux, and Stripe for payments.",
-      demoLink: "#",
+      image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      description: "A fully responsive e-commerce platform built with React, tailwind css and Paystack for payments.",
+      demoLink: "https://e-x-clusive-shop.vercel.app",
       codeLink: "#",
-      technologies: ["React", "Redux", "Node.js", "Express", "MongoDB"]
+      technologies: ["React", "Tailwind CSS", "dummy JSON API"]
     },
     {
       id: 2,
-      title: "Task Management App",
-      category: "app",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "A beautiful task management application with drag-and-drop functionality and user authentication.",
-      demoLink: "#",
+      title: "Public IP Address Tracker",
+      category: "web",
+      image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      description: "A web application that tracks and displays the public IP address of the user in real-time.",
+      demoLink: "https://ipfy-track.vercel.app",
       codeLink: "#",
-      technologies: ["React", "Firebase", "Tailwind CSS", "DnD Kit"]
+      technologies: ["React", "Firebase", "Tailwind CSS"]
     },
     {
       id: 3,
-      title: "Weather Dashboard",
+      title: "Leap On Mentorship Project",
       category: "web",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "A weather dashboard that displays current weather and forecasts for multiple locations.",
-      demoLink: "#",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      description: "A mentorship platform that connects mentors and mentees for skill development.",
+      demoLink: "https://leap-on-mentorship-program-xkjq.vercel.app",
       codeLink: "#",
-      technologies: ["JavaScript", "OpenWeather API", "Chart.js", "CSS3"]
+      technologies: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"]
     },
     {
       id: 4,
-      title: "Portfolio Website",
-      category: "design",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "A clean and modern portfolio website to showcase projects and skills.",
-      demoLink: "#",
+      title: "Online Ticket Generator",
+      category: "web",
+      image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      description: "A web application that allows users to generate tickets for events.",
+      demoLink: "https://ticket-gen-five.vercel.app",
       codeLink: "#",
-      technologies: ["React", "Tailwind CSS", "Framer Motion"]
+      technologies: ["React", "Tailwind CSS", "Cloudinary"]
     }
   ];
   
@@ -52,36 +51,16 @@ const ProjectsSection = () => {
     ? projects 
     : projects.filter(project => project.category === activeCategory);
   
-  const categories = [
-    { id: "all", name: "All Projects" },
-    { id: "web", name: "Web Development" },
-    { id: "app", name: "App Development" },
-    { id: "design", name: "UI/UX Design" }
-  ];
+
 
   return (
     <section id="projects" className="section-padding bg-white">
       <div className="container mx-auto">
         <h2 className="section-heading text-center">My Projects</h2>
-        <p className="text-lg text-gray-600 mb-12 text-center max-w-2xl mx-auto">
+        <p className="text-lg text-gray-600 mb-12 text-center max-w-2xl mx-auto">i wn
           Here are some of my recent projects that showcase my skills and experience.
         </p>
-        
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              className={`px-6 py-2 rounded-full transition-all ${
-                activeCategory === category.id 
-                  ? 'bg-portfolio-blue text-white' 
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-              }`}
-              onClick={() => setActiveCategory(category.id)}
-            >
-              {category.name}
-            </button>
-          ))}
-        </div>
+
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {filteredProjects.map((project) => (
@@ -101,13 +80,7 @@ const ProjectsSection = () => {
                     >
                       <Link size={18} />
                     </a>
-                    <a 
-                      href={project.codeLink} 
-                      className="bg-white text-portfolio-blue p-2 rounded-full hover:bg-portfolio-blue hover:text-white transition-colors"
-                      aria-label="View code"
-                    >
-                      <Code size={18} />
-                    </a>
+                   
                   </div>
                 </div>
               </div>
@@ -126,6 +99,7 @@ const ProjectsSection = () => {
                 </div>
                 <a 
                   href={project.demoLink} 
+                  target="_blank" 
                   className="inline-flex items-center text-portfolio-blue font-medium hover:text-portfolio-teal transition-colors"
                 >
                   View Details <ArrowRight size={16} className="ml-1" />
@@ -135,9 +109,7 @@ const ProjectsSection = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12">
-          <a href="#" className="btn-secondary inline-block">View All Projects</a>
-        </div>
+     
       </div>
     </section>
   );

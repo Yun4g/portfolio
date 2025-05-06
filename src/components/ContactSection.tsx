@@ -124,7 +124,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-gray-500">Email</h4>
-                    <a href="mailto:your.email@example.com" className="text-portfolio-blue hover:underline">your.email@example.com</a>
+                    <a href="mailto:your.email@example.com" className="text-portfolio-blue hover:underline">delightvincent487@gmail.com</a>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -133,7 +133,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-gray-500">Phone</h4>
-                    <a href="tel:+1234567890" className="text-portfolio-blue hover:underline">+1 (234) 567-890</a>
+                    <a href="tel:08060329362" className="text-portfolio-blue hover:underline">08060329362</a>
                   </div>
                 </div>
               </div>
@@ -143,7 +143,7 @@ const ContactSection = () => {
               <h3 className="text-2xl font-bold mb-6 text-portfolio-blue">Connect With Me</h3>
               <div className="flex gap-4">
                 <a 
-                  href="https://github.com/" 
+                  href="https://github.com/Yun4g" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-portfolio-blue/10 rounded-full flex items-center justify-center hover:bg-portfolio-blue hover:text-white transition-colors"
@@ -151,7 +151,7 @@ const ContactSection = () => {
                   <Github size={20} />
                 </a>
                 <a 
-                  href="https://linkedin.com/" 
+                  href="https://www.linkedin.com/in/delight-vincent-700946300/" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-portfolio-blue/10 rounded-full flex items-center justify-center hover:bg-portfolio-blue hover:text-white transition-colors"

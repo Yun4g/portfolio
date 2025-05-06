@@ -7,7 +7,7 @@ const SkillsSection = () => {
       title: "Frontend Development",
       skills: [
         { name: "HTML5", level: 90 },
-        { name: "CSS3/SCSS", level: 85 },
+        { name: "CSS3", level: 85 },
         { name: "JavaScript", level: 90 },
         { name: "TypeScript", level: 80 },
         { name: "React.js", level: 85 },
@@ -18,7 +18,6 @@ const SkillsSection = () => {
       title: "Other Skills",
       skills: [
         { name: "Tailwind CSS", level: 90 },
-        { name: "UI/UX Design", level: 75 },
         { name: "Git/GitHub", level: 85 },
         { name: "Responsive Design", level: 90 },
         { name: "REST APIs", level: 80 },

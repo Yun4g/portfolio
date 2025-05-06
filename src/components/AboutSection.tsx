@@ -20,10 +20,10 @@ const AboutSection = () => {
               </div>
               <h3 className="text-xl font-bold mb-2">Personal Info</h3>
               <ul className="space-y-2 text-gray-600">
-                <li>Name: Your Name</li>
-                <li>Age: 28</li>
-                <li>Location: New York, USA</li>
-                <li>Languages: English, Spanish</li>
+                <li>Name: Delight</li>
+                <li>Age: 21</li>
+                <li>Location: port harcourt Nigeria</li>
+                <li>Languages: English, </li>
               </ul>
             </div>
             
@@ -33,9 +33,9 @@ const AboutSection = () => {
               </div>
               <h3 className="text-xl font-bold mb-2">Experience</h3>
               <ul className="space-y-2 text-gray-600">
-                <li>Frontend Developer at XYZ (2021-Present)</li>
-                <li>UI Designer at ABC (2019-2021)</li>
-                <li>Internship at DEF (2018)</li>
+                <li>Frontend Developer Intern at cinfores Limited </li>
+                <li>Team Lead on Leapn on mentorship project</li>
+               
               </ul>
             </div>
             
@@ -45,9 +45,9 @@ const AboutSection = () => {
               </div>
               <h3 className="text-xl font-bold mb-2">Education</h3>
               <ul className="space-y-2 text-gray-600">
-                <li>BSc Computer Science, University of XYZ (2017-2021)</li>
-                <li>Web Development Bootcamp (2018)</li>
-                <li>UI/UX Certificate (2019)</li>
+                <li>Undergraduate in Computer Science, at the University of port harcourt </li>
+                <li>Web Development Bootcamp </li>
+             
               </ul>
             </div>
           </div>
