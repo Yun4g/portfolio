@@ -35,16 +35,7 @@ const ProjectsSection = () => {
       codeLink: "#",
       technologies: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"]
     },
-    {
-      id: 4,
-      title: "E-commerce Website",
-      category: "web",
-      image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "A fully responsive e-commerce platform built with React, tailwind css and Paystack for payments.",
-      demoLink: "https://e-x-clusive-shop.vercel.app",
-      codeLink: "#",
-      technologies: ["React", "Tailwind CSS", "dummy JSON API"]
-    }
+  
   ];
   
   const filteredProjects = activeCategory === "all" 
