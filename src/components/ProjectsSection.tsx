@@ -7,13 +7,13 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "E-commerce Website",
+      title: "Online Ticket Generator",
       category: "web",
-      image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "A fully responsive e-commerce platform built with React, tailwind css and Paystack for payments.",
-      demoLink: "https://e-x-clusive-shop.vercel.app",
+      image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      description: "A web application that allows users to generate tickets for events.",
+      demoLink: "https://ticket-gen-five.vercel.app",
       codeLink: "#",
-      technologies: ["React", "Tailwind CSS", "dummy JSON API"]
+      technologies: ["React", "Tailwind CSS", "Cloudinary"]
     },
     {
       id: 2,
@@ -37,13 +37,13 @@ const ProjectsSection = () => {
     },
     {
       id: 4,
-      title: "Online Ticket Generator",
+      title: "E-commerce Website",
       category: "web",
-      image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "A web application that allows users to generate tickets for events.",
-      demoLink: "https://ticket-gen-five.vercel.app",
+      image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      description: "A fully responsive e-commerce platform built with React, tailwind css and Paystack for payments.",
+      demoLink: "https://e-x-clusive-shop.vercel.app",
       codeLink: "#",
-      technologies: ["React", "Tailwind CSS", "Cloudinary"]
+      technologies: ["React", "Tailwind CSS", "dummy JSON API"]
     }
   ];
   
