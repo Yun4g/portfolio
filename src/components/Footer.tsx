@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
           
           <div className="mb-4 md:mb-0">
-            <ul className="flex space-x-6">
+            <ul className="flex flex-wrap text-center justify-center space-x-6">
               <li><a href="#home" className="hover:text-blue-300 transition-colors duration-300">Home</a></li>
               <li><a href="#about" className="hover:text-blue-300 transition-colors duration-300">About</a></li>
               <li><a href="#skills" className="hover:text-blue-300 transition-colors duration-300">Skills</a></li>
@@ -34,7 +34,7 @@ const Footer = () => {
             aria-label="Scroll to top"
           >
             <ArrowUp size={20} />
-            
+
           </button>
         </div>
         <div className="mt-8 text-center text-blue-200">
