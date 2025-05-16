@@ -5,9 +5,9 @@ import { User, Briefcase, Code } from 'lucide-react';
 const AboutSection = () => {
   return (
     <section id="about" className="section-padding bg-white">
-      <div className="container mx-auto">
+      <div className="container md:mx-auto">
         <h2 className="section-heading text-center">About Me</h2>
-        <div className="max-w-3xl mx-auto">
+        <div className="md:max-w-3xl mx-auto">
           <p className="text-lg text-gray-600 mb-8 text-center">
             I'm a passionate frontend developer with experience in creating responsive and interactive web applications. 
             I love solving complex problems and turning ideas into reality through elegant code.

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowUp } from 'lucide-react';
 
@@ -35,6 +34,7 @@ const Footer = () => {
             aria-label="Scroll to top"
           >
             <ArrowUp size={20} />
+            
           </button>
         </div>
         <div className="mt-8 text-center text-blue-200">

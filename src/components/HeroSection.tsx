@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen flex items-center pt-20 bg-gradient-to-b from-portfolio-gray-light to-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto ">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-portfolio-gray-dark font-heading mb-4">
