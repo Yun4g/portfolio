@@ -31,7 +31,7 @@ const ProjectsSection = () => {
       category: "web",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       description: "A mentorship platform that connects mentors and mentees for skill development.",
-      demoLink: "https://leap-on-ng.netlify.app/",
+      demoLink: "leapon.com.ng",
       codeLink: "#",
       technologies: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"]
     },

@@ -38,7 +38,7 @@ const Footer = () => {
           </button>
         </div>
         <div className="mt-8 text-center text-blue-200">
-          <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Your Delight Vincent. All rights reserved.</p>
         </div>
       </div>
     </footer>
