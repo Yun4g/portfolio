@@ -21,7 +21,7 @@ const AboutSection = () => {
               <h3 className="text-xl font-bold mb-2">Personal Info</h3>
               <ul className="space-y-2 text-gray-600">
                 <li>Name: Delight</li>
-                <li>Age: 21</li>
+               
                 <li>Location: port harcourt Nigeria</li>
                 <li>Languages: English, </li>
               </ul>

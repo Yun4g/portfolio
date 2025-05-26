@@ -31,9 +31,19 @@ const ProjectsSection = () => {
       category: "web",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       description: "A mentorship platform that connects mentors and mentees for skill development.",
-      demoLink: "leapon.com.ng",
+      demoLink: "https://leapon.com.ng",
       codeLink: "#",
       technologies: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"]
+    },
+     {
+      id: 4,
+      title: "Movie browser",
+      category: "web",
+      image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      description: "A web application that allows users to browse and search for movies.",
+      demoLink: "https://movie-world-iota.vercel.app",
+      codeLink: "#",
+      technologies: ["Nextjs", "Tailwind CSS", "Typescript",  "MongoDB"]
     },
   
   ];

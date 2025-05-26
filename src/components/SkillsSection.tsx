@@ -6,22 +6,22 @@ const SkillsSection = () => {
     {
       title: "Frontend Development",
       skills: [
-        { name: "HTML5", level: 90 },
-        { name: "CSS3", level: 85 },
-        { name: "JavaScript", level: 90 },
-        { name: "TypeScript", level: 80 },
-        { name: "React.js", level: 85 },
-        { name: "Next.js", level: 75 },
+        { name: "HTML5"},
+        { name: "CSS3"},
+        { name: "JavaScript" },
+        { name: "TypeScript" },
+        { name: "React.js"},
+        { name: "Next.js" },
       ]
     },
     {
       title: "Other Skills",
       skills: [
-        { name: "Tailwind CSS", level: 90 },
-        { name: "Git/GitHub", level: 85 },
-        { name: "Responsive Design", level: 90 },
-        { name: "REST APIs", level: 80 },
-        { name: "Testing", level: 70 },
+        { name: "Tailwind CSS"},
+        { name: "Git/GitHub" },
+        { name: "Responsive Design"},
+        { name: "REST APIs" },
+        { name: "Testing"},
       ]
     }
   ];
@@ -43,13 +43,9 @@ const SkillsSection = () => {
                   <div key={skillIndex}>
                     <div className="flex justify-between mb-1">
                       <span className="font-medium">{skill.name}</span>
-                      <span className="text-gray-500">{skill.level}%</span>
                     </div>
                     <div className="w-full h-2 bg-gray-200 rounded-full">
-                      <div 
-                        className="h-full rounded-full bg-gradient-to-r from-portfolio-blue to-portfolio-teal"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
+                     
                     </div>
                   </div>
                 ))}
