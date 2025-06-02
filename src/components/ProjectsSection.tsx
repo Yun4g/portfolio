@@ -5,6 +5,17 @@ const ProjectsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   
   const projects = [
+      {
+      id: 0,
+      title: "Full stack exam management system",
+      category: "web",
+      image: "/quizImage.jpg",
+      description: "A full stack exam management system that allows users to create, manage, and take quizzes online.",
+      demoLink: "https://ease-quiz.vercel.app",
+      codeLink: "#",
+      technologies: ["Nextjs", "Tailwind CSS", "mongoDB", ]
+    },
+
     {
       id: 1,
       title: "Online Ticket Generator",
