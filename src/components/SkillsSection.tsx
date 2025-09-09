@@ -9,6 +9,7 @@ import {
   SiTailwindcss,
   SiGit,
   SiGithub,
+
 } from "react-icons/si";
 
 const SkillsSection = () => {
@@ -37,9 +38,9 @@ const SkillsSection = () => {
 
   return (
     <section id="skills" className="section-padding bg-portfolio-gray-light">
-      <div className="container mx-auto">
+      <div className="md:container mx-auto">
         <h2 className="section-heading text-center">My Skills</h2>
-        <p className="text-lg text-gray-600 mb-12 text-center max-w-2xl mx-auto">
+        <p className="text-lg text-gray-600 mb-12 text-center md:max-w-2xl mx-auto">
           I specialize in frontend development but also work with backend and database technologies to build complete web applications.
         </p>
 

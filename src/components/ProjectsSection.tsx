@@ -76,7 +76,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="section-padding bg-white">
-      <div className="container mx-auto">
+      <div className="md:container mx-auto">
         <motion.h2
           className="section-heading text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -114,7 +114,7 @@ const ProjectsSection = () => {
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          autoplay={{ delay: 4000,  }}
           breakpoints={{
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },

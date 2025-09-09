@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <header className="w-full z-[1000] fixed top-0 flex items-center pt-4">
       <nav
-        className={`w-full max-w-6xl border rounded-full mx-auto transition-all duration-300 px-4 py-3 flex justify-between items-center ${
+        className={`w-full max-w-xl md:max-w-6xl border rounded-full mx-auto transition-all duration-300 px-4 md:py-3 flex justify-between items-center ${
           isScrolled ? "bg-white shadow-md" : "bg-transparent"
         }`}
       >
@@ -54,8 +54,7 @@ const Navbar = () => {
             </a>
           ))}
 
-          {/* CV Download Button */}
-          <a href="/Delight-CV.pdf" download="Delight-Vincent-CV.pdf">
+          <a href="/CV.pdf" download="/CV.pdf">
             <button className="w-[190px] h-[50px] flex justify-center gap-2 items-center rounded-xl text-white bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#3b82f6] hover:scale-105 transition-transform">
               <Download className="h-5 w-5" />
               Download CV
