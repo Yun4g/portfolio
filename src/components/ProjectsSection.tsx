@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import {SiGithub} from "react-icons/si";
 
 const ProjectsSection = () => {
   const projects = [
@@ -75,10 +76,10 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="section-padding bg-white">
+    <section id="projects" className="section-padding ">
       <div className="md:container mx-auto">
         <motion.h2
-          className="section-heading text-center"
+          className="section-heading text-center text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -88,25 +89,16 @@ const ProjectsSection = () => {
         </motion.h2>
 
         <motion.div
-         className=" text-center"
+         className=" text-center w-full flex justify-center gap-3 my-5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <a href="https://github.com/Yun4g?tab=repositories" target="blank" className="text-center text-[blue]">Click here to go to my Github</a>
+          <a href="https://github.com/Yun4g?tab=repositories" target="_blank" className="w-full flex justify-center gap-3 items-center text-[white]">Vist my <span><SiGithub className="text-black text-4xl" /> </span></a>
         </motion.div>
 
-        <motion.p
-          className="text-lg text-gray-600 mb-12 text-center max-w-2xl mx-auto"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          Here are some of my recent projects that showcase my skills and
-          experience.
-        </motion.p>
+    
 
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -123,7 +115,7 @@ const ProjectsSection = () => {
           {projects.map((project) => (
             <SwiperSlide key={project.id}>
               <motion.div
-                className="card overflow-hidden group"
+                className="bg-black/30 rounded-2xl overflow-hidden group"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -147,13 +139,13 @@ const ProjectsSection = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <h3 className="text-xl  text-white font-bold mb-2">{project.title}</h3>
+                  <p className="text-gray-200 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="bg-portfolio-blue/10 text-portfolio-blue text-sm px-3 py-1 rounded-full"
+                        className="bg-black text-white text-sm px-3 py-1 rounded-full"
                       >
                         {tech}
                       </span>
@@ -163,7 +155,7 @@ const ProjectsSection = () => {
                     href={project.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-portfolio-blue font-medium hover:text-portfolio-teal transition-colors"
+                    className="inline-flex items-center text-white  font-medium hover:text-portfolio-teal transition-colors"
                   >
                     View Details <ArrowRight size={16} className="ml-1" />
                   </a>

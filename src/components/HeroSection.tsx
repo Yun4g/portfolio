@@ -3,6 +3,7 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTypingEffect } from "./useTypingEffect";
+import {  Download } from "lucide-react";
 
 const HeroSection: React.FC = () => {
   const typedText = useTypingEffect( ["Software Developer", "User Experience Enthusiast", "Problem Solver"],
@@ -13,7 +14,7 @@ const HeroSection: React.FC = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center pt-20 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#3b82f6] text-slate-100"
+      className="min-h-screen flex items-center pt-20  text-slate-100"
     >
       <div className="container  px-6">
         <div>
@@ -36,22 +37,21 @@ const HeroSection: React.FC = () => {
               focus on performance and delightful user experiences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
+            
               <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="#projects"
-                className="bg-blue-500 hover:bg-blue-600 transition text-white px-6 py-3 rounded-xl shadow-lg flex items-center justify-center gap-2"
-              >
-                View My Work <ArrowRight size={18} />
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="#contact"
                 className="bg-emerald-500 hover:bg-emerald-600 transition text-white px-6 py-3 rounded-xl shadow-lg flex items-center justify-center"
               >
                 Contact Me
               </motion.a>
+               <a href="/CV.pdf" download="/CV.pdf">
+            <button className="w-[190px] h-[50px]  flex justify-center gap-2 items-center rounded-xl text-white bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#3b82f6]  transition-transform">
+              <Download className="h-5 w-5" />
+              Download CV
+            </button>
+              </a>
+              
             </div>
           </motion.div>
 
