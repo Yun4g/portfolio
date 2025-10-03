@@ -67,7 +67,7 @@ const ProjectsSection = () => {
       title: "Movie Browser",
       category: "web",
       image:
-        "https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "/movie world browser.PNG",
       description:
         "A web application that allows users to browse and search for movies.",
       demoLink: "https://movie-world-iota.vercel.app",
