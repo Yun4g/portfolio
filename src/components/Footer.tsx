@@ -10,12 +10,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-portfolio-blue text-white py-8">
+    <footer className="bg-black text-white py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 me-auto md:me-0 md:mb-0">
             <span className="text-xl font-bold">Delight vincent Aberage </span>
-            <p className="mt-2 text-blue-100">Frontend Developer</p>
+            <p className="mt-2 text-blue-100">Software Developer</p>
           </div>
           
           <div className="mb-4 md:mb-0">

@@ -24,7 +24,7 @@ const HeroSection: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+            <h1 className="text-4xl md:text-5xl text-center lg:text-6xl font-extrabold leading-tight">
               Hi, I&apos;m{" "}
               <span className="text-blue-400">Delight Vincent</span>
             </h1>

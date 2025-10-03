@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Mail, Phone, Github, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 
 const ContactSection = () => {
+  const [message, setMessage] = useState<string>("")
+  console.log(message)
   return (
     <section
       id="contact"
       className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-gray-100"
     >
       <div className="container mx-auto px-4 sm:px-6 md:px-12">
-       
+
+        
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -103,9 +106,33 @@ const ContactSection = () => {
                 <Linkedin size={20} />
               </a>
             </div>
+
+
+          
+
+            
           </motion.div>
+
+             <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white shadow-lg rounded-2xl h-[400px] p-6 sm:p-8  "
+          >  
+              <h1 className="my-4 text-xl font-bold text-blue-800 md:text-3xl">Drop a message let work</h1>
+            <form className=" h-full w-full">
+              <textarea name="message"
+                onChange={(e)=> setMessage(e.target.value)}
+                value={message}
+                className="w-full p-3 outline-none rounded-lg border-2 h-[50%]" id="" placeholder="Kindly leave a message"></textarea>
+              <button className="w-[200px] h-[50px] flex justify-center gap-2 mt-2 items-center rounded-2xl text-white bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#3b82f6]  transition-transform">
+                send message</button>
+            </form>
+            </motion.div>
+          </div>
         </div>
-      </div>
+        
     </section>
   );
 };
