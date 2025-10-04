@@ -31,7 +31,7 @@ const AboutSection = () => {
                 <li>Name: Delight Vincent</li>
                 <li>Languages: English</li>
                 <li>
-                  Passion: football, Coding & Music – I love expressing creativity both in
+                  Passion: Football, Coding & Music – I love expressing creativity both in
                   code and sound.
                 </li>
               </ul>
@@ -57,7 +57,7 @@ const AboutSection = () => {
                   – a live streaming event platform.
                 </li>
                 <li>
-                 frontend developer of{" "}
+                 Frontend developer of{" "}
                   <a
                     href=" "
                     target="_blank"
@@ -70,7 +70,7 @@ const AboutSection = () => {
                 </li>
                 <li>
                   Internship experience at Cinfores Limited – worked on real
-                  frontend projects and team collaborations.
+                  Frontend projects and team collaborations.
                 </li>
               </ul>
             </div>
