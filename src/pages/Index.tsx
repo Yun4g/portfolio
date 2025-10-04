@@ -9,10 +9,9 @@ import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
-// Reusable wrapper for sections
 const AnimatedSection: React.FC<{ children: React.ReactNode; delay?: number }> = ({ children, delay = 0 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, });
 
   return (
     <motion.div
@@ -28,7 +27,7 @@ const AnimatedSection: React.FC<{ children: React.ReactNode; delay?: number }> =
 
 const Index = () => {
   return (
-    <div className="h-fit">
+    <div className="h-fit w-full overflow-x-hidden">
       <Navbar />
 
         <HeroSection />

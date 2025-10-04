@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <header className="w-full z-[1000] fixed top-0 flex  items-center pt-4">
       <nav
-        className={`w-full max-w-xl md:max-w-6xl h-[70px]  rounded-full relative mx-auto transition-all duration-300 px-4 md:py-3 flex justify-between md:justify-center items-center ${
+        className={`w-full  md:max-w-6xl h-[70px]  rounded-full relative mx-auto transition-all duration-300 px-4 md:py-3 flex justify-between md:justify-center items-center ${
           isScrolled === true ? "bg-black/50 shadow-md" : "bg-transparent"
         }`}
       >
