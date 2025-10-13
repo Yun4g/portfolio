@@ -2,9 +2,46 @@ import React, { useState } from "react";
 import { Mail, Phone, Github, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 
+
 const ContactSection = () => {
+
   const [message, setMessage] = useState<string>("")
+  const [email, setEmail] = useState<string>("");
+  const [name, setName] = useState<string>("")
+  const [phoneNumber, setPhoneNumber] = useState<number>()
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [modal, setModal] = useState<boolean>(false)
   console.log(message)
+
+  const handleSubmitMessage = async () => {
+    setIsLoading(true)
+    try {
+      setIsLoading(true)
+      const req = await fetch('https://portfoliobackend-wcv8.onrender.com/api/send-email', {
+        method: 'POST',
+        headers: {
+        "Content-Type": "application/json", 
+      },
+
+        body: JSON.stringify({ email, message, phoneNumber, name })
+
+      })
+      const res = await req.json()
+      if (res) {
+        setModal(true)
+      }
+
+      console.log(res)
+      alert('message sent successfully')
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+
+
   return (
     <section
       id="contact"
@@ -12,7 +49,7 @@ const ContactSection = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 md:px-12">
 
-        
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -31,7 +68,7 @@ const ContactSection = () => {
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-          {/* Contact Information */}
+
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -43,7 +80,7 @@ const ContactSection = () => {
               Contact Information
             </h3>
             <div className="space-y-6">
-              {/* Email */}
+
               <div className="flex flex-col md:flex-row items-center gap-4">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-portfolio-blue/10 rounded-full flex items-center justify-center">
                   <Mail className="text-portfolio-blue" size={20} />
@@ -59,7 +96,6 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              {/* Phone */}
               <div className="flex flex-col md:flex-row items-center gap-4">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-portfolio-blue/10 rounded-full flex items-center justify-center">
                   <Phone className="text-portfolio-blue" size={20} />
@@ -77,7 +113,6 @@ const ContactSection = () => {
             </div>
           </motion.div>
 
-          {/* Social Links */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -108,31 +143,87 @@ const ContactSection = () => {
             </div>
 
 
-          
 
-            
+
+
           </motion.div>
 
-             <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-white shadow-lg rounded-2xl h-[400px] p-6 sm:p-8  "
-          >  
-              <h1 className="my-4 text-xl font-bold text-blue-800 md:text-3xl">Drop a message let work</h1>
-            <form className=" h-full w-full">
-              <textarea name="message"
-                onChange={(e)=> setMessage(e.target.value)}
-                value={message}
-                className="w-full p-3 outline-none rounded-lg border-2 h-[50%]" id="" placeholder="Kindly leave a message"></textarea>
-              <button className="w-[200px] h-[50px] flex justify-center gap-2 mt-2 items-center rounded-2xl text-white bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#3b82f6]  transition-transform">
-                send message</button>
-            </form>
-            </motion.div>
-          </div>
+
         </div>
-        
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-white shadow-lg rounded-2xl h-fit mt-[70px] p-6 sm:p-8  "
+        >
+          <h1 className="my-4 text-xl font-bold text-blue-800 md:text-3xl text-center">Drop a message let work</h1>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmitMessage();
+            }}
+            className=" h-full w-full">
+
+            <div className=" grid grid-cols-1 max-w-[1000px] mx-auto  md:grid-cols-2 my-[40px] gap-4">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Please Enter your name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                  className="w-full p-3 outline-none rounded-lg border-2"
+                />
+              </div>
+
+              <div>
+                <input
+                  type="email"
+                  placeholder=" Email Address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full p-3 outline-none rounded-lg border-2"
+                  required
+                />
+              </div>
+
+              <div>
+                <input
+                  type="number"
+                  placeholder=" Phone Number"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(Number(e.target.value))}
+                  className="w-full p-3 outline-none rounded-lg border-2"
+                />
+              </div>
+            </div>
+
+            <textarea name="message"
+              onChange={(e) => setMessage(e.target.value)}
+              value={message}
+              className="w-full p-3 outline-none rounded-lg border-2 h-[250px]" id="" placeholder="Kindly leave a message"></textarea>
+
+
+            <button
+              type="submit"
+              className="w-[200px] h-[50px] flex justify-center gap-2 mt-2 items-center rounded-lg text-white bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#3b82f6]  transition-transform">
+              {
+                isLoading ? (
+                 <span> sending..</span>
+                ) : (
+                  <span>send  Message</span>
+                )
+
+              }
+
+            </button>
+
+
+          </form>
+        </motion.div>
+      </div>
+
     </section>
   );
 };
