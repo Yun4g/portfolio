@@ -13,32 +13,32 @@ const ContactSection = () => {
   const [modal, setModal] = useState<boolean>(false)
   console.log(message)
 
-  const handleSubmitMessage = async () => {
-    setIsLoading(true)
-    try {
-      setIsLoading(true)
-      const req = await fetch('https://portfoliobackend-wcv8.onrender.com/api/send-email', {
-        method: 'POST',
-        headers: {
-        "Content-Type": "application/json", 
-      },
+  // const handleSubmitMessage = async () => {
+  //   setIsLoading(true)
+  //   try {
+  //     setIsLoading(true)
+  //     const req = await fetch('https://portfoliobackend-wcv8.onrender.com/api/send-email', {
+  //       method: 'POST',
+  //       headers: {
+  //       "Content-Type": "application/json", 
+  //     },
 
-        body: JSON.stringify({ email, message, phoneNumber, name })
+  //       body: JSON.stringify({ email, message, phoneNumber, name })
 
-      })
-      const res = await req.json()
-      if (res) {
-        setModal(true)
-      }
+  //     })
+  //     const res = await req.json()
+  //     if (res) {
+  //       setModal(true)
+  //     }
 
-      console.log(res)
-      alert('message sent successfully')
-    } catch (error) {
-      console.log(error)
-    } finally {
-      setIsLoading(false)
-    }
-  }
+  //     console.log(res)
+  //     alert('message sent successfully')
+  //   } catch (error) {
+  //     console.log(error)
+  //   } finally {
+  //     setIsLoading(false)
+  //   }
+  // }
 
 
 
@@ -148,8 +148,8 @@ const ContactSection = () => {
 
           </motion.div>
 
-
-        </div>
+   </div>
+        {/* 
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -222,8 +222,8 @@ const ContactSection = () => {
 
           </form>
         </motion.div>
-      </div>
-
+      </div> */}
+</div> 
     </section>
   );
 };
