@@ -1,6 +1,5 @@
-// src/pages/index.tsx
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -9,16 +8,22 @@ import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
-const AnimatedSection: React.FC<{ children: React.ReactNode; delay?: number }> = ({ children, delay = 0 }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, });
+const sectionVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+};
 
+const AnimatedSection: React.FC<{ children: React.ReactNode; delay?: number }> = ({
+  children,
+  delay = 0,
+}) => {
   return (
     <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, delay }}
+      variants={sectionVariants}
+      initial={false}
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.7, delay }}
     >
       {children}
     </motion.div>
@@ -27,32 +32,31 @@ const AnimatedSection: React.FC<{ children: React.ReactNode; delay?: number }> =
 
 const Index = () => {
   return (
-    <div className="h-fit w-full  overflow-y-auto ">
+    <main className="w-full overflow-x-hidden">
       <Navbar />
 
-        <HeroSection />
-    
+      <HeroSection />
 
-      <AnimatedSection delay={0.2}>
+      <AnimatedSection delay={0.1}>
         <AboutSection />
       </AnimatedSection>
 
-      <AnimatedSection delay={0.3}>
+      <AnimatedSection delay={0.15}>
         <SkillsSection />
       </AnimatedSection>
 
-      <AnimatedSection delay={0.4}>
+      <AnimatedSection delay={0.2}>
         <ProjectsSection />
       </AnimatedSection>
 
-      <AnimatedSection delay={0.5}>
+      <AnimatedSection delay={0.25}>
         <ContactSection />
       </AnimatedSection>
 
-      <AnimatedSection delay={0.6}>
+      <AnimatedSection delay={0.3}>
         <Footer />
       </AnimatedSection>
-    </div>
+    </main>
   );
 };
 

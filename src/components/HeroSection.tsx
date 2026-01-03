@@ -13,7 +13,6 @@ const HeroSection: React.FC = () => {
 
   return (
     <section
-      id="home"
       className="min-h-screen flex items-center pt-20  text-slate-100"
     >
       <div className="container  px-6">
