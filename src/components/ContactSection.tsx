@@ -32,7 +32,12 @@ const ContactSection = () => {
       }
 
       console.log(res)
-      alert('message sent successfully')
+      alert('message sent successfully');
+      setEmail("")
+      setMessage("")
+      setName("")
+      setPhoneNumber(undefined)
+      
     } catch (error) {
       console.log(error)
     } finally {

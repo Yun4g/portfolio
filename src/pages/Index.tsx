@@ -27,7 +27,7 @@ const AnimatedSection: React.FC<{ children: React.ReactNode; delay?: number }> =
 
 const Index = () => {
   return (
-    <div className="h-fit w-full overflow-x-hidden">
+    <div className="h-fit w-full  overflow-y-auto ">
       <Navbar />
 
         <HeroSection />
