@@ -9,7 +9,7 @@ const AboutSection: React.FC = () => {
         <div className="md:max-w-7xl mx-auto">
           <div className="flex justify-center items-center w-full">
               <p className="text-lg max-w-3xl text-gray-100 mb-8 text-center">
-            I'm a dedicated frontend developer with hands-on experience in
+            I'm a dedicated Fullstack developer with hands-on experience in
             building real-world applications that combine functionality with
             elegant design. I enjoy turning ideas into digital solutions, and my
             journey has allowed me to work on impactful projects across different
