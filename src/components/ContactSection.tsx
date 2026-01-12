@@ -20,8 +20,8 @@ const ContactSection = () => {
       const req = await fetch('https://portfoliobackend-wcv8.onrender.com/api/send-email', {
         method: 'POST',
         headers: {
-        "Content-Type": "application/json", 
-      },
+          "Content-Type": "application/json",
+        },
 
         body: JSON.stringify({ email, message, phoneNumber, name })
 
@@ -37,7 +37,7 @@ const ContactSection = () => {
       setMessage("")
       setName("")
       setPhoneNumber(undefined)
-      
+
     } catch (error) {
       console.log(error)
     } finally {
@@ -215,7 +215,36 @@ const ContactSection = () => {
               className="w-[200px] h-[50px] flex justify-center gap-2 mt-2 items-center rounded-lg text-white bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#3b82f6]  transition-transform">
               {
                 isLoading ? (
-                 <span> sending..</span>
+
+                  <span className="flex items-center gap-1">
+                    <span>Sending</span>
+                    <motion.span
+                      className="inline-flex gap-1"
+                      initial="hidden"
+                      animate="visible"
+                      variants={{
+                        visible: {
+                          transition: {
+                            staggerChildren: 0.2,
+                            repeat: Infinity,
+                          },
+                        },
+                      }}
+                    >
+                      {[0, 1, 2].map((i) => (
+                        <motion.span
+                          key={i}
+                          className="inline-block"
+                          variants={{
+                            hidden: { opacity: 0 },
+                            visible: { opacity: 1 },
+                          }}
+                        >
+                          .
+                        </motion.span>
+                      ))}
+                    </motion.span>
+                  </span>
                 ) : (
                   <span>send  Message</span>
                 )

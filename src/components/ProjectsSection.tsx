@@ -32,13 +32,13 @@ const ProjectsSection = () => {
     },
     {
       id: 2,
-      title: "Full Stack Exam Management System",
+      title: "chat Application",
       category: "web",
-      image: "/quizImage.jpg",
+      image: "/public/chat app.PNG",
       description:
-        "A full stack exam management system that allows users to create, manage, and take quizzes online.",
-      demoLink: "https://ease-quiz.vercel.app",
-      technologies: ["Next.js", "Tailwind CSS", "MongoDB"],
+        "A full stack chat applcation that ensures seamless real time interaction ",
+      demoLink: "https://d-chat-one.vercel.app",
+      technologies: ["React.js", "Tailwind CSS", "shadCn Ui", "node js", "Express js", "Socket.io" , "MongoDB"],
     },
     {
       id: 3,
