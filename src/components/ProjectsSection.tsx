@@ -22,19 +22,19 @@ const ProjectsSection = () => {
     },
     {
       id: 1,
-      title: "Aces - Student Referral System",
+      title: "CinAnalytics",
       category: "web",
-      image: "/checkemail.PNG", 
+      image: "/cinAnalytics.PNG", 
       description:
-        "A referral system built for student engagement and tracking. Features dashboards, referral tracking, and authentication.",
-      demoLink: "https://aces-pre.vercel.app",
-      technologies: ["Next.js", "Tailwind CSS", "TypeScript", "MongoDB"],
+        "A System that tracks the activities and performace of  a web application",
+      demoLink: "https://cin-analytics.vercel.app/",
+      technologies: ["React.js", "Tailwind CSS", "TypeScript",  "Node js", "Express js", "Postgre sql"],
     },
     {
       id: 2,
       title: "chat Application",
       category: "web",
-      image: "/public/chat app.PNG",
+      image: "/chat app.PNG",
       description:
         "A full stack chat applcation that ensures seamless real time interaction ",
       demoLink: "https://d-chat-one.vercel.app",
