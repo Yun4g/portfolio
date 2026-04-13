@@ -12,13 +12,13 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 0,
-      title: "Fero Event - Live Streaming Platform",
+      title: " Whatsapp Manajer",
       category: "web",
-      image: "/section 3.PNG", 
+      image: "/scheduleMessage.PNG", 
       description:
-        "A live streaming event platform that allows users to host and participate in online events in real-time.",
-      demoLink: "https://feroevent.com",
-      technologies: ["Reactjs", "Tailwind CSS", "nodejs", "WebRTC", "Mongo DB"],
+        "A plat form for managing and organizing WhatsApp groups, providing tools for group administration and communication.",
+      demoLink: "https://manajer.vercel.app/",
+      technologies: ["Reactjs", "Tailwind CSS", "nodejs", "Express", "post gre Sql"],
     },
     {
       id: 1,
