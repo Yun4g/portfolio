@@ -27,7 +27,7 @@ const ProjectsSection = () => {
       image: "/cinAnalytics.PNG", 
       description:
         "A System that tracks the activities and performace of  a web application",
-      demoLink: "https://cin-analytics.vercel.app/",
+      demoLink: "https://cinalytics.vercel.app/",
       technologies: ["React.js", "Tailwind CSS", "TypeScript",  "Node js", "Express js", "Postgre sql"],
     },
     {
