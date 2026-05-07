@@ -62,17 +62,7 @@ const ProjectsSection = () => {
       demoLink: "https://ipfy-track.vercel.app",
       technologies: ["React", "Firebase", "Tailwind CSS"],
     },
-    {
-      id: 5,
-      title: "Movie Browser",
-      category: "web",
-      image:
-        "/movie world browser.PNG",
-      description:
-        "A web application that allows users to browse and search for movies.",
-      demoLink: "https://movie-world-iota.vercel.app",
-      technologies: ["Next.js", "Tailwind CSS", "TypeScript", "MongoDB"],
-    },
+ 
   ];
 
   return (
