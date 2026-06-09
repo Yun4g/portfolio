@@ -10,35 +10,26 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white py-8">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 me-auto md:me-0 md:mb-0">
-            <span className="text-xl font-bold">Delight vincent Aberage </span>
-            <p className="mt-2 text-blue-100">Software Developer</p>
+    <footer className="section-padding bg-[#020712] text-slate-300">
+      <div className="mx-auto max-w-6xl">
+        <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="text-xl font-semibold text-white">Delight Vincent Aberage</p>
+            <p className="mt-2 text-slate-400">Software Developer</p>
           </div>
-          
-          <div className="mb-4 md:mb-0">
-            <ul className="flex flex-wrap text-center justify-center space-x-6">
-              <li><a href="#home" className="hover:text-blue-300 transition-colors duration-300">Home</a></li>
-              <li><a href="#about" className="hover:text-blue-300 transition-colors duration-300">About</a></li>
-              <li><a href="#skills" className="hover:text-blue-300 transition-colors duration-300">Skills</a></li>
-              <li><a href="#projects" className="hover:text-blue-300 transition-colors duration-300">Projects</a></li>
-              <li><a href="#contact" className="hover:text-blue-300 transition-colors duration-300">Contact</a></li>
-            </ul>
-          </div>
-          
-          <button 
-            onClick={scrollToTop} 
-            className="bg-white text-portfolio-blue p-3 rounded-full hover:bg-blue-100 transition-colors duration-300"
-            aria-label="Scroll to top"
-          >
-            <ArrowUp size={20} />
-
+          <ul className="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
+            <li><a href="#home" className="transition hover:text-white">Home</a></li>
+            <li><a href="#about" className="transition hover:text-white">About</a></li>
+            <li><a href="#skills" className="transition hover:text-white">Skills</a></li>
+            <li><a href="#projects" className="transition hover:text-white">Projects</a></li>
+            <li><a href="#contact" className="transition hover:text-white">Contact</a></li>
+          </ul>
+          <button onClick={scrollToTop} className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 text-white shadow-2xl shadow-cyan-500/20 transition hover:-translate-y-1" aria-label="Scroll to top">
+            <ArrowUp size={18} />
           </button>
         </div>
-        <div className="mt-8 text-center text-blue-200">
-          <p>&copy; {new Date().getFullYear()} DTECH.</p>
+        <div className="mt-8 border-t border-white/10 pt-6 text-center text-sm text-slate-500">
+          <p>&copy; {new Date().getFullYear()} Delight Vincent. Built with modern motion and premium design.</p>
         </div>
       </div>
     </footer>

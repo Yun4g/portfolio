@@ -8,23 +8,13 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-    
-      if (window.scrollY > 200) {
-         setIsScrolled(true);
-      } else {
-        setIsScrolled(false)
-      }
-
-      
+      setIsScrolled(window.scrollY > 80);
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
 
   const navLinks = [
     { name: "About", href: "#about" },
@@ -33,83 +23,45 @@ const Navbar = () => {
     { name: "Contact", href: "#contact" },
   ];
 
-  const WhatsappContact = () => {
-    
-  }
   return (
-    <header className="w-full z-[1000] fixed top-0 flex  items-center pt-4">
-      <nav
-        className={`w-full  md:max-w-6xl h-[70px]  rounded-full relative mx-auto transition-all duration-300 px-4 md:py-3 flex justify-between md:justify-center items-center ${
-          isScrolled === true ? "bg-black/50 shadow-md" : "bg-transparent"
-        }`}
-      >
-
-        <div className="md:absolute left-6 top-4">
-          <img src="/MY logo.jpg" className="h-10 w-10 rounded-full object-contain"/>
-        </div>
-
-        <div className="md:absolute right-6 top-4 cursor-pointer">
-          <a
-            href="https://wa.me/08060329362"
-            target="_blank">
-               <SiWhatsapp className="h-full text-4xl text-green-500"/>
-            </a>
-        
+    <header className="fixed inset-x-0 top-0 z-[1000]">
+      <div className={`mx-auto flex h-20 max-w-6xl items-center justify-between px-4 transition-all duration-300 ${isScrolled ? "backdrop-blur-2xl bg-slate-950/80 shadow-2xl shadow-black/20" : "bg-transparent"}`}>
+        <a href="#home" className="flex items-center gap-3 text-white">
+          <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-white/10 ring-1 ring-white/10 shadow-lg shadow-violet-500/10">
+            <img src="/MY logo.jpg" alt="Logo" className="h-9 w-9 rounded-full object-cover" />
           </div>
+          <span className="text-sm font-semibold uppercase tracking-[0.24em] text-white/90">Delight</span>
+        </a>
 
-        <div className="hidden md:flex items-center  space-x-8">
+        <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className={`font-medium transition-colors text-white hover:text-gray-200`}
-            >
+            <a key={link.name} href={link.href} className="text-sm font-medium text-white/80 transition hover:text-white">
               {link.name}
             </a>
           ))}
+        </nav>
 
-         
+        <div className="flex items-center gap-3">
+          <a href="https://wa.me/08060329362" target="_blank" rel="noreferrer" className="rounded-full bg-cyan-400/10 p-3 text-cyan-300 transition hover:bg-cyan-400/20">
+            <SiWhatsapp size={20} />
+          </a>
+          <button onClick={() => setIsMenuOpen((prev) => !prev)} className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-slate-950/60 text-white transition hover:border-white/20 md:hidden">
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
-
-        <button className="md:hidden" onClick={toggleMenu}>
-          {isMenuOpen ? (
-            <X
-              className={`${isScrolled ? "text-[white]" : "text-white"}`}
-              size={24}
-            />
-          ) : (
-            <Menu
-              className={`${isScrolled ? "text-[white]" : "text-white"}`}
-              size={24}
-            />
-          )}
-        </button>
-      </nav>
+      </div>
 
       {isMenuOpen && (
-        <div className="md:hidden absolute top-[80px] left-0 right-0 bg-white shadow-md rounded-lg animate-fade-in mx-4">
-          <div className="flex flex-col py-4 px-6 space-y-4">
+        <div className="mx-4 mt-4 rounded-3xl border border-white/10 bg-slate-950/95 p-5 shadow-2xl shadow-black/30 backdrop-blur-2xl md:hidden">
+          <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-gray-800 font-medium hover:text-portfolio-blue"
-                onClick={() => setIsMenuOpen(false)}
-              >
+              <a key={link.name} href={link.href} className="text-white/90 text-base font-medium transition hover:text-white" onClick={() => setIsMenuOpen(false)}>
                 {link.name}
               </a>
             ))}
-
-            <a href="/CV.pdf" download="/CV.pdf">
-              <button className="w-full h-[50px] flex justify-center gap-2 items-center rounded-2xl text-white bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#3b82f6] hover:scale-105 transition-transform">
-                <Download className="h-5 w-5" />
-                Download CV
-              </button>
+            <a href="/CV.pdf" download="/CV.pdf" className="inline-flex h-12 items-center justify-center rounded-2xl bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 text-sm font-semibold text-white transition hover:-translate-y-0.5">
+              <Download className="mr-2 h-4 w-4" /> Download CV
             </a>
-             <div className="absolute right-6 top-4 cursor-pointer">
-      
-        
-          </div>
           </div>
         </div>
       )}

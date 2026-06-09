@@ -1,95 +1,103 @@
 import React from "react";
 import { User, Briefcase, Code, Music } from "lucide-react";
+import { motion } from "framer-motion";
 
 const AboutSection: React.FC = () => {
   return (
-    <section id="about" aria-labelledby="about-heading" className="py-4 md:section-padding">
-      <div className="md:mx-auto">
-        <h2 id="about-heading" className="text-white text-3xl font-bold text-center my-[40px]">About Me</h2>
-        <div className="md:max-w-7xl mx-auto">
-          <div className="flex justify-center items-center w-full">
-              <p className="text-lg max-w-3xl text-gray-100 mb-8 text-center">
-            I'm a dedicated Fullstack developer with hands-on experience in
-            building real-world applications that combine functionality with
-            elegant design. I enjoy turning ideas into digital solutions, and my
-            journey has allowed me to work on impactful projects across different
-            domains.
+    <section id="about" className="relative section-padding overflow-hidden bg-[#03081a]">
+      <div className="absolute -left-16 top-10 h-72 w-72 rounded-full bg-violet-500/10 blur-3xl" />
+      <div className="absolute right-0 top-28 h-64 w-64 rounded-full bg-cyan-400/10 blur-3xl" />
+
+      <div className="mx-auto max-w-6xl">
+        <div className="text-center">
+          <h2 className="section-heading">About Me</h2>
+          <p className="mx-auto mt-4 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
+            I am a passionate full-stack developer building modern, responsive applications with a strong focus on polished UI, performance, and delightful interactions.
           </p>
-
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-12 px-3 items-stretch">
-
-            <div className="w-full bg-black/40 rounded-md shadow-sm shadow-slate-700 p-6 text-center flex flex-col justify-between">
-              <div>
-                <div className="w-16 h-16 rounded-full flex items-center bg-red-300/30 justify-center mx-auto mb-4">
-                  <User size={24} className="text-white" aria-hidden="true" />
-                </div>
-                <h3 className="text-2xl text-white font-bold mb-2">Personal Info</h3>
-                <ul className="space-y-2 text-gray-200 text-left">
-                  <li><strong>Name:</strong> Delight Vincent</li>
-                  <li><strong>Languages:</strong> English</li>
-                  <li>
-                    <strong>Passion:</strong> Football, Coding & Music – I love expressing creativity both in
-                    code and sound.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="w-full bg-black/40 rounded-md shadow-sm shadow-slate-700 p-6 text-center flex flex-col justify-between">
-              <div>
-                <div className="w-16 h-16 bg-portfolio-teal/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Briefcase size={24} className="text-portfolio-teal" aria-hidden="true" />
-                </div>
-                <h3 className="text-2xl text-white font-bold mb-2">Experience</h3>
-                <ul className="space-y-2 text-gray-200 text-left">
-                  <li>
-                    Frontend Developer for <a href="https://feroevent.com" target="_blank" rel="noopener noreferrer" className="text-portfolio-blue underline">Fero Event</a> – a live streaming event platform.
-                  </li>
-                  <li>
-                    Frontend developer of <a href="#" className="text-portfolio-blue underline">Aces</a>, a student referral system built to streamline academic referrals.
-                  </li>
-                  <li>
-                    Internship experience at Cinfores Limited – worked on real Frontend projects and team collaborations.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="w-full bg-black/40 rounded-md shadow-sm shadow-slate-700 p-6 text-center flex flex-col justify-between">
-              <div>
-                <div className="w-16 h-16 bg-portfolio-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Code size={24} className="text-portfolio-blue" aria-hidden="true" />
-                </div>
-                <h3 className="text-2xl text-white font-bold mb-2">Education</h3>
-                <ul className="space-y-2 text-gray-200 text-left">
-                  <li>Graduate in Computer Science, University of Port Harcourt</li>
-                  <li>Completed a Web Development Bootcamp</li>
-                  <li>Hands-on project experience in React, Next.js & TypeScript</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="w-full bg-black/40 rounded-md shadow-sm shadow-slate-700 p-6 text-center flex flex-col justify-between">
-              <div>
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Music size={24} className="text-purple-500" aria-hidden="true" />
-                </div>
-                <h3 className="text-2xl text-white font-bold mb-2">My Love for Music</h3>
-                <p className="text-gray-200 text-left">
-                  Beyond coding, music is a big part of my life. It fuels my creativity and inspires the way I approach solving problems and building user-centered applications.
-                </p>
-              </div>
-            </div>
-          </div>
-         
-
-          <div className="mt-12 text-center">
-            <a href="#contact" className="btn-primary inline-block">
-              Get In Touch
-            </a>
-          </div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-12 grid gap-6 lg:grid-cols-2"
+        >
+          <div className="glass-card p-8">
+            <div className="mb-6 flex items-center gap-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-violet-500/10 text-violet-300">
+                <User size={28} />
+              </div>
+              <div>
+                <p className="text-sm uppercase tracking-[0.28em] text-cyan-200/80">Personal Info</p>
+                <h3 className="mt-3 text-2xl font-semibold text-white">Who I am</h3>
+              </div>
+            </div>
+            <ul className="space-y-3 text-slate-300">
+              <li><strong className="text-white">Name:</strong> Delight Vincent</li>
+              <li><strong className="text-white">Languages:</strong> English</li>
+              <li><strong className="text-white">Passions:</strong> Football, Coding & Music</li>
+            </ul>
+          </div>
+
+          <div className="space-y-6">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="glass-card p-8"
+            >
+              <div className="mb-6 flex items-center gap-4">
+                <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-cyan-400/10 text-cyan-300">
+                  <Briefcase size={28} />
+                </div>
+                <div>
+                  <p className="text-sm uppercase tracking-[0.28em] text-cyan-200/80">Experience</p>
+                  <h3 className="mt-3 text-2xl font-semibold text-white">Production-ready projects</h3>
+                </div>
+              </div>
+              <ul className="space-y-3 text-slate-300">
+                <li>Frontend Developer at <a href="https://feroevent.com" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-white">Fero Event</a> building live streaming platforms.</li>
+                <li>Built Aces, a referral management system for student networking.</li>
+                <li>Internship at Cinfores Limited, delivering polished frontend features in a team environment.</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="glass-card p-8"
+            >
+              <div className="mb-6 flex items-center gap-4">
+                <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-violet-500/10 text-violet-300">
+                  <Code size={28} />
+                </div>
+                <div>
+                  <p className="text-sm uppercase tracking-[0.28em] text-cyan-200/80">Education</p>
+                  <h3 className="mt-3 text-2xl font-semibold text-white">Built on strong fundamentals</h3>
+                </div>
+              </div>
+              <ul className="space-y-3 text-slate-300">
+                <li>Graduate in Computer Science from University of Port Harcourt.</li>
+                <li>Web development training in React, TypeScript, and modern frameworks.</li>
+                <li>Experience building highly interactive web products from end to end.</li>
+              </ul>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-12 flex justify-center"
+        >
+          <a href="#contact" className="btn-primary">
+            Get In Touch
+          </a>
+        </motion.div>
       </div>
     </section>
   );
