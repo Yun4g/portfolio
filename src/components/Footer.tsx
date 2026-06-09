@@ -29,7 +29,7 @@ const Footer = () => {
           </button>
         </div>
         <div className="mt-8 border-t border-white/10 pt-6 text-center text-sm text-slate-500">
-          <p>&copy; {new Date().getFullYear()} Delight Vincent. Built with modern motion and premium design.</p>
+          <p>&copy; {new Date().getFullYear()} Dtech (Delight Vincent). </p>
         </div>
       </div>
     </footer>

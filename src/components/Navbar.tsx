@@ -59,7 +59,7 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <a href="/CV.pdf" download="/CV.pdf" className="inline-flex h-12 items-center justify-center rounded-2xl bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 text-sm font-semibold text-white transition hover:-translate-y-0.5">
+            <a href="/dTechResume.docx" download="/dTechResume.docx" className="inline-flex h-12 items-center justify-center rounded-2xl bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 text-sm font-semibold text-white transition hover:-translate-y-0.5">
               <Download className="mr-2 h-4 w-4" /> Download CV
             </a>
           </div>

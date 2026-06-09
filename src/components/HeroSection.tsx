@@ -47,7 +47,7 @@ const HeroSection: React.FC = () => {
             >
               Let&apos;s Talk
             </motion.a>
-            <a href="/CV.pdf" download="/CV.pdf" className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20">
+            <a href="/dTechResume.docx" download="/dTechResume.docx" className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20">
               <Download className="mr-2 h-4 w-4" /> Download CV
             </a>
           </div>
