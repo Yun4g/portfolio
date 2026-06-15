@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-cyan-200 shadow-lg shadow-cyan-500/10 backdrop-blur-sm">
-            
+
           </span>
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
             Hi, I&apos;m <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-300 bg-clip-text text-transparent">Delight Vincent</span>
@@ -71,14 +71,18 @@ const HeroSection: React.FC = () => {
             </div>
             <div className="grid gap-5 sm:grid-cols-2">
               {[
-                { label: "React", value: "Clean UI" },
-                { label: "Tailwind", value: "Fast Styling" },
-                { label: "TypeScript", value: "Robust Code" },
-                { label: "Motion", value: "Smooth Flow" },
+                { label: "Frontend", value: "React, Next.js, Tailwind CSS" },
+                { label: "Backend", value: "Node.js, Express.js, NestJS" },
+                { label: "Database", value: "PostgreSQL, MongoDB, Supabase" },
+                { label: "API Development", value: "REST APIs, GraphQL, WebSockets" },
+                { label: "Cloud & Hosting", value: "Vercel, Railway, AWS" },
               ].map((item) => (
-                <div key={item.label} className="rounded-3xl border border-white/10 bg-slate-950/80 p-4 text-white/90">
+                <div
+                  key={item.label}
+                  className="rounded-3xl border border-white/10 bg-slate-950/80 p-4 text-white/90"
+                >
                   <p className="text-sm text-cyan-200/80">{item.label}</p>
-                  <p className="mt-2 text-lg font-semibold">{item.value}</p>
+                  <p className="mt-2 text-sm font-semibold">{item.value}</p>
                 </div>
               ))}
             </div>
