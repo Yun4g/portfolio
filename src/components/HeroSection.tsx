@@ -48,6 +48,8 @@ const HeroSection: React.FC = () => {
               Let&apos;s Talk
             </motion.a>
             <a href="/Delight_Vincent_CV (2).docx" download="/Delight_Vincent_CV (2).docx" className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20">
+              
+              
               <Download className="mr-2 h-4 w-4" /> Download CV
             </a>
           </div>

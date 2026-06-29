@@ -27,20 +27,21 @@ const projects = [
   },
   {
     id: 2,
+    title: "  E-campus multi tanant Application",
+    image: "/uniplug.PNG",
+    description: "A platform for university Management.",
+    demoLink: "https://uniplug.vercel.app/",
+    technologies: ["React", "Tailwind",  "Node.js", "MongoDB"],
+  },
+  {
+    id: 3,
     title: "Chat Application",
     image: "/chat app.PNG",
     description: "A real-time chat platform built for seamless communication and connection.",
     demoLink: "https://d-chat-one.vercel.app",
     technologies: ["React", "Tailwind", "Socket.io", "Node.js", "MongoDB"],
   },
-  {
-    id: 3,
-    title: "Online Ticket Generator",
-    image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    description: "A sleek ticket generator for events, ready for customer-facing workflows.",
-    demoLink: "https://ticket-gen-five.vercel.app",
-    technologies: ["React", "Tailwind", "Cloudinary"],
-  },
+
   {
     id: 4,
     title: "IP Address Tracker",
