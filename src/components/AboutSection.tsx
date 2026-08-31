@@ -21,31 +21,15 @@ const AboutSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mt-12 grid gap-6 lg:grid-cols-2"
+          className="mt-12 grid gap-6 lg:grid-cols-1"
         >
-          <div className="glass-card p-8">
-            <div className="mb-6 flex items-center gap-4">
-              <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-violet-500/10 text-violet-300">
-                <User size={28} />
-              </div>
-              <div>
-                <p className="text-sm uppercase tracking-[0.28em] text-cyan-200/80">Personal Info</p>
-                <h3 className="mt-3 text-2xl font-semibold text-white">Who I am</h3>
-              </div>
-            </div>
-            <ul className="space-y-3 text-slate-300">
-              <li><strong className="text-white">Name:</strong> Delight Vincent</li>
-              <li><strong className="text-white">Languages:</strong> English</li>
-              <li><strong className="text-white">Passions:</strong> Football, Coding & Music</li>
-            </ul>
-          </div>
-
-          <div className="space-y-6">
+          
+          <div className=" grid grid-cols-1 md:grid-cols-2 items-center gap-3">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="glass-card p-8"
+              className="glass-card p-8 w-full h-full"
             >
               <div className="mb-6 flex items-center gap-4">
                 <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-cyan-400/10 text-cyan-300">
@@ -67,9 +51,9 @@ const AboutSection: React.FC = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="glass-card p-8"
+              className="glass-card h-full  p-8 w-full "
             >
-              <div className="mb-6 flex items-center gap-4">
+              <div className=" flex items-center gap-4">
                 <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-violet-500/10 text-violet-300">
                   <Code size={28} />
                 </div>
@@ -85,6 +69,23 @@ const AboutSection: React.FC = () => {
               </ul>
             </motion.div>
           </div>
+          <div className="glass-card p-8 h-fit">
+            <div className="mb-6 flex items-center gap-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-violet-500/10 text-violet-300">
+                <User size={28} />
+              </div>
+              <div>
+                <p className="text-sm uppercase tracking-[0.28em] text-cyan-200/80">Personal Info</p>
+                <h3 className="mt-3 text-2xl font-semibold text-white">Who I am</h3>
+              </div>
+            </div>
+            <ul className="space-y-3 text-slate-300">
+              <li><strong className="text-white">Name:</strong> Delight Vincent</li>
+              <li><strong className="text-white">Languages:</strong> English</li>
+              <li><strong className="text-white">Passions:</strong> Football, Coding & Music</li>
+            </ul>
+          </div>
+
         </motion.div>
 
         <motion.div
