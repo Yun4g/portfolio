@@ -94,7 +94,7 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <SwiperSlide key={project.id}>
               <motion.div
-                className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl shadow-black/20 transition-all duration-300 hover:-translate-y-2"
+                className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/5  shadow-black/20 transition-all duration-300 hover:-translate-y-2"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.08 }}

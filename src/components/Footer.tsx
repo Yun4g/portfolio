@@ -24,7 +24,7 @@ const Footer = () => {
             <li><a href="#projects" className="transition hover:text-white">Projects</a></li>
             <li><a href="#contact" className="transition hover:text-white">Contact</a></li>
           </ul>
-          <button onClick={scrollToTop} className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 text-white shadow-2xl shadow-cyan-500/20 transition hover:-translate-y-1" aria-label="Scroll to top">
+          <button onClick={scrollToTop} className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 text-white  shadow-cyan-500/20 transition hover:-translate-y-1" aria-label="Scroll to top">
             <ArrowUp size={18} />
           </button>
         </div>

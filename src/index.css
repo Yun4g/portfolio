@@ -69,9 +69,9 @@
 }
 
 @layer components {
-  .btn-primary {
-    @apply bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 text-white px-6 py-3 rounded-full shadow-lg shadow-violet-500/20 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl;
-  }
+ .btn-primary {
+  @apply bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 text-white px-6 py-3 rounded-full shadow-violet-500/20 transition-transform duration-300 hover:-translate-y-1;
+}
 
   .btn-secondary {
     @apply bg-white/10 text-white px-6 py-3 rounded-full border border-white/10 transition-colors duration-300 hover:bg-white/20 font-medium;
@@ -86,11 +86,11 @@
   }
 
   .card {
-    @apply bg-white/5 border border-white/10 rounded-3xl shadow-2xl shadow-black/20 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-white/20;
+    @apply bg-white/5 border border-white/10 rounded-3xl  shadow-black/20 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-white/20;
   }
 
   .glass-card {
-    @apply bg-white/10 border border-white/10 rounded-3xl shadow-xl shadow-cyan-500/10 backdrop-blur-xl;
+    @apply bg-white/10 border border-white/10 rounded-3xl  shadow-cyan-500/10 backdrop-blur-xl;
   }
 }
 

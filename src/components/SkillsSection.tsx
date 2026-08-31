@@ -50,7 +50,7 @@ const SkillsSection = () => {
             whileHover={{ y: -10, scale: 1.02 }}
             className="glass-card group p-8 text-center"
           >
-            <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-3xl border border-white/10 bg-white/5 text-4xl shadow-lg shadow-cyan-500/10 transition-all duration-300 group-hover:scale-105">
+            <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-3xl border border-white/10 bg-white/5 text-4xl  shadow-cyan-500/10 transition-all duration-300 group-hover:scale-105">
               {skill.icon}
             </div>
             <h3 className="text-xl font-semibold text-white">{skill.name}</h3>

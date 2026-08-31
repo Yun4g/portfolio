@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-cyan-200 shadow-lg shadow-cyan-500/10 backdrop-blur-sm">
+          <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-cyan-200  shadow-cyan-500/10 backdrop-blur-sm">
 
           </span>
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
@@ -43,7 +43,7 @@ const HeroSection: React.FC = () => {
             <motion.a
               whileTap={{ scale: 0.98 }}
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-2xl shadow-cyan-500/20 transition-transform duration-300 hover:-translate-y-1"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 px-6 py-3 text-sm font-semibold text-white  shadow-cyan-500/20 transition-transform duration-300 hover:-translate-y-1"
             >
               Let&apos;s Talk
             </motion.a>
@@ -59,7 +59,7 @@ const HeroSection: React.FC = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative mx-auto w-full max-w-xl rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/20 backdrop-blur-xl ring-1 ring-white/10 lg:p-8"
+          className="relative mx-auto w-full max-w-xl rounded-[2rem] border border-white/10 bg-white/5 p-6  shadow-black/20 backdrop-blur-xl ring-1 ring-white/10 lg:p-8"
         >
           <div className="absolute -left-16 top-6 h-28 w-28 rounded-full bg-violet-500/15 blur-3xl" />
           <div className="absolute -right-16 bottom-10 h-32 w-32 rounded-full bg-cyan-400/10 blur-3xl" />
